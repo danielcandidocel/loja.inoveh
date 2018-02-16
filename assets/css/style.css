@@ -125,3 +125,33 @@ nav a{
     text-align: center;
     text-transform: uppercase;
 }
+.corpo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1140px;
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+#banner .container{
+    width: 1070px;
+    height: 450px;
+    margin-bottom: 30px;  
+}
+.carousel-indicators li{
+    background: #0D3F80;
+    border: #0D3F80;
+}
+.carousel-indicators .active{
+    background: #FE9800;
+    border: #FE9800;
+}
+#produtos-home{
+    width: 1040px;
+    height: 600px;
+    background: green;
+}

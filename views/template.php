@@ -3,14 +3,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=0" />
         
-  
-        
         <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css" type="text/css" />
+        
+        <!--Script para funcionar o Slider-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <!--Scritp para funcionar a barra de rolagem do preço-->
+        
+        <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script> 
+        <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.min.js"></script> 
+        <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/jquery-ui.theme.min.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/jquery-ui.min.css" type="text/css" />
         <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/jquery-ui.structure.min.css" type="text/css" />
-        <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/jquery-ui.theme.min.css" type="text/css" />
+        
         <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL; ?>assets/css/style.css" />
-        <script src="<?php echo BASE_URL; ?>assets/js/script.js" type="text/javascript"></script>
+        
         <title>Inoveh Shop</title>
     </head>
 <body>
@@ -61,7 +68,33 @@
             </nav>
         </div>
     </header>
-
+    <div class="corpo">
+        <section id="banner">
+            <div class="container">
+                <div id="slider" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#slider" data-slide-to="0" class="active"></li>
+                        <li data-target="#slider" data-slide-to="1"></li>
+                        <li data-target="#slider" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="<?php echo BASE_URL;?>assets/images/slide/imagem.jpg" alt="INOVEH" style="width:100%" />
+                        </div>
+                        <div class="item">
+                            <img src="<?php echo BASE_URL;?>assets/images/slide/imagem1.jpg" alt="INOVEH" style="width:100%" />
+                        </div>
+                        <div class="item">
+                            <img src="<?php echo BASE_URL;?>assets/images/slide/imagem.jpg" alt="INOVEH" style="width:100%" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="produtos-home">
+            
+        </section>
+    </div>
               
      
 <footer>
@@ -73,7 +106,7 @@
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.zoom.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.zoom.min.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-ui.min.js"></script>
-    <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script> 
+    <script src="<?php echo BASE_URL; ?>assets/js/script.js" type="text/javascript"></script>
     
 </body>
 </html>
