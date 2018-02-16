@@ -13,7 +13,7 @@ class core {
             $url = explode('/', $url);
             array_shift($url);//remove o primeiro item do array.
             
-            $currentController = $url[0].'Controller';//se existe url, o primeiro item da url é o controller
+            $currentController = $url[0].'controller';//se existe url, o primeiro item da url é o controller
             array_shift($url);
             
             if(isset($url[0]) && !empty($url[0])) {
@@ -28,12 +28,12 @@ class core {
             }
                         
         } else {
-            $currentController = 'homeController';//se não existe url, então o controller padrão é homeController.
+            $currentController = 'homecontroller';//se não existe url, então o controller padrão é homeController.
             $currentAction = 'index';//se não existe action, a action padrão é index.
         }
                 
         if(!file_exists('controllers/'.$currentController.'.php') || !method_exists($currentController, $currentAction)) {
-            $currentController = 'notfoundController';//se não existe o controle abre o controller notfound
+            $currentController = 'notfoundcontroller';//se não existe o controle abre o controller notfound
             $currentAction = 'index';
 	}
             $c = new $currentController();//instaciando o controller escolhido
