@@ -1,5 +1,6 @@
 <?php
 class produtos extends model {
+    
     public function getProdutosHome() {
         $array = array();
         
