@@ -132,6 +132,7 @@
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.zoom.min.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-ui.min.js"></script>
     <script src="<?php echo BASE_URL; ?>assets/js/script.js" type="text/javascript"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/slide_produtos_home.js" type="text/javascript"></script>
     
 </body>
 </html>

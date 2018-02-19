@@ -48,6 +48,7 @@ class homecontroller extends controller {
 //        $dados['totalProdutos'] = $produtos->getTotalProdutos($filtros);//pegando o total de itens do produto para gerar a paginação.
 //        $dados['numeroPaginas'] = ceil($dados['totalProdutos'] / $limit);//ceil arredonda pra cima
 //        $dados['paginaAtual'] = $paginaAtual;//pagina atual para activar paginação
+        $dados['totalProdutos'] = $p->getTotalProdutos();
         $dados['listHome'] = $p->getProdutosHome();
         
         $this->loadTemplate('home', $dados);//loadView é uma função do arquivo core/controller.php.

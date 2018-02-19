@@ -14,4 +14,18 @@ class produtos extends model {
         
         return $array;
     }
+    
+    public function getTotalProdutos(){
+        $array = array();
+        
+        $sql = "SELECT COUNT(*) as total_produtos FROM produtos";
+        $sql = $this->db->query($sql);
+            if($sql->rowCount() > 0) {
+            $array = $sql->fetch();
+            
+        }
+        
+        return $array;
+    }
+    
 }
