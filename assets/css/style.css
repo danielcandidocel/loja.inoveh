@@ -131,6 +131,7 @@ nav a{
     justify-content: center;
     align-items: center;
     max-width: 1140px;
+    min-height: 600px;
     height: auto;
     margin: auto;
     margin-top: 20px;
