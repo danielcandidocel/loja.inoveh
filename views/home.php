@@ -29,6 +29,7 @@
 <section class="produtos-home">
     <?php foreach ($viewData['listHome'] as $produto): ?>
     <article>
+        <a href="<?php echo BASE_URL.'produto/abrir/'.$produto['slug'];?>">
         <div class="produto-imagem">
             <img src="<?php echo BASE_URL.'assets/images/produtos/'.$produto['imagem']; ?>" alt="<?php echo $produto['nome']; ?>"/>
         </div>
@@ -50,7 +51,7 @@
             <strong>R$ <?PHP echo number_format($produto['valor_por'], 2, ',', '.');?></strong>
         </div>
         <div class="produto-add-to-cart">
-            <a href="">
+            <a href="<?php echo BASE_URL; ?>carrinho">
                 <div class="add-cart">
                     <span class="glyphicon glyphicon-shopping-cart"></span>
                     <p>Adicionar no </p><strong>Carrinho</strong>
@@ -60,7 +61,7 @@
         <div class="produto-obs">
             <p>* Produto distribuido por <?php echo utf8_encode($produto['distribuidor']); ?></p>
         </div>
-
+        </a>
     </article>
     <?php endforeach; ?>
 

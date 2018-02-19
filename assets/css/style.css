@@ -180,8 +180,8 @@ article:hover .produto-imagem img{
     min-width: 310px;
     min-height: 310px;
 }
-article:hover {
-    cursor: pointer;
+article a:hover {
+    text-decoration: none;
 }
 .produto-imagem{
     height: 350px;
