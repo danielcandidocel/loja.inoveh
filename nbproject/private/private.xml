@@ -3,10 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/xampp/htdocs/inoveh/views/produto.php</file>
+            <file>file:/C:/xampp/htdocs/inoveh/controllers/produtocontroller.php</file>
             <file>file:/C:/xampp/htdocs/inoveh/views/home.php</file>
             <file>file:/C:/xampp/htdocs/inoveh/assets/css/style.css</file>
             <file>file:/C:/xampp/htdocs/inoveh/models/produtos.php</file>
-            <file>file:/C:/xampp/htdocs/inoveh/controllers/homecontroller.php</file>
+            <file>file:/C:/xampp/htdocs/inoveh/views/template.php</file>
         </group>
     </open-files>
 </project-private>

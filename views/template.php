@@ -68,9 +68,9 @@
             </nav>
         </div>
     </header>
-    <div class="corpo">
+    
         <?php $this->loadViewInTemplate($viewName, $viewData); ?>
-    </div>
+ 
 <footer>
     <div class="rodape">
         <div class="rod1">
