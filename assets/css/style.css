@@ -131,7 +131,7 @@ nav a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 1140px;
+    width: 100%;
     min-height: 600px;
     height: auto;
     margin: auto;
@@ -158,28 +158,38 @@ nav a{
     padding-left: 10px;
     padding-right: 10px;
     border-bottom: 3px solid #FE9900;
-    
+    text-align: center;
+    padding-bottom: 10px;
+}
+/*Fim CSS Template-Topo
+
+Inicio CSS Home-Produto*/
+#secao-home{
+    margin-top: 20px;
+}
+.w3-content{
+    width:100%;
+    min-width: 1200px;
 }
 .produtos-home{
-    width: 1140px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 #article-home{    
-    width: 345px;
-    height: 770px;
-    border: 2px solid #8AA1D0;
-    border-radius: 30px;
+    width: 240px;
+    height: 800px;
+/*    border: 2px solid #8AA1D0;
+    border-radius: 30px;*/
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin-top: 50px;
 }
 #article-home:hover .produto-home-imagem img{
-    min-width: 310px;
-    min-height: 310px;
+    min-width: 230px;
+    min-height: 230px;
 }
 #article-home a:hover {
     text-decoration: none;
@@ -192,19 +202,20 @@ nav a{
     align-items: center;
 }
 .produto-home-imagem img{
-    max-width: 290px;
-    max-height: 290px;
+    max-width: 200px;
+    max-height: 240px;
 }
 .produto-home-descricao{
-    height: 60px;
-    width: 330px;
+    height: 70px;
+    width: 235px;
 }
 .produto-home-marca{
-    height: 30px;
-    width: 335px;
+    height: 50px;
+    width: 235px;
     margin-left: 6px;
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     margin-bottom: 20px;
 }
 .produto-home-descricao h2 {
@@ -220,19 +231,20 @@ nav a{
 
 .produto-home-valor-de{
     height: 35px;
-    width: 335px;
+    width: 235px;
     margin-left: 6px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    font-weight: lighter;
 }
 .produto-home-valor-de p{
     color: #043D80;
-    font-size: 18px;
+    font-size: 16px;
 }
 .produto-home-valor-por{
     height: 85px;
-    width: 335px;
+    width: 235px;
     margin-left: 6px;
     display: flex;
     justify-content: center;
@@ -246,7 +258,7 @@ nav a{
 .produto-home-valor-por strong{
     margin-bottom: 0;
     color: #043D80;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .produto-home-add-to-cart{
@@ -271,8 +283,8 @@ nav a{
     color: #FE9900;
 }
 .add-cart{
-    height: 85px;
-    width: 270px;
+    height: 80px;
+    width: 220px;
     background-color:#FE9900;
     border-radius: 13px;
     display: flex;
@@ -281,7 +293,7 @@ nav a{
     align-items: center;
 }
 .add-cart span{
-    font-size: 40px;
+    font-size: 30px;
     color: #043D80;
 }
 .add-cart p{
@@ -301,6 +313,41 @@ nav a{
     color: #858785;
     font-size: 12px;
 }
+.button-prev{
+    text-align: left;
+    display: block;
+    position: relative;
+}
+.button-slide1{
+    font-size: 50px;
+    border: 1px solid #A7C7FF;
+    margin-top: -550px;
+    background: transparent;
+}
+.button-slide1:hover{
+    color:#043D80;
+    background-color: #FFF;
+  
+}
+.button-next{
+    text-align: right;
+    display: block;
+    position: relative;
+}
+.button-slide2{
+    font-size: 50px;
+    border: 1px solid #A7C7FF;
+    margin-top: -550px;
+    background: transparent;
+}
+.button-slide2:hover{
+    color:#043D80;
+    background-color: #FFF;
+  
+}
+/*Fim CSS HOME - PRODUTO
+
+INICIO CSS Footer*/
 footer{
     height: 410px;
     display: flex;
@@ -464,7 +511,7 @@ footer{
     padding: 0;
     margin: 0;
 }
-/*Fim CSS HOME TEMPLATE
+/*Fim CSS Footer-TEMPLATE
 
 Inicio CSS Pagina Produto*/
 .produto{
