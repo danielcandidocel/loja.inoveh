@@ -39,9 +39,9 @@
                 </div>
                 <div class="busca">
                     <div class="campo-busca">
-                        <form>
-                            <input type="text" id="busca" placeholder="Digite o que procura"/>
-                            <input type="button" value="Buscar" id="button" class="button"/>
+                        <form action="<?php echo BASE_URL?>produto/busca" method="GET">
+                            <input type="text" id="busca" name="b" placeholder="Digite o que procura"/>
+                            <input type="submit" value="Buscar" id="button" class="button"/>
                         </form>
                     </div>
                     <div class="cart">

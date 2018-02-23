@@ -41,5 +41,22 @@ class produtocontroller extends controller {
         exit();
         
     }
+    
+    public function busca() {
+        $dados = array();
+        $p = new produtos();
+        
+    if(isset($_GET['b']) && !empty($_GET['b'])){
+        $busca = addslashes($_GET['b']);
+        $dados['busca'] = $p->buscar($busca);
+    } 
+    if (empty($dados['busca'])){
+        $dados['contador'] = 1;
+    } else {
+        $dados['contador'] = 0;
+    }
+                   
+        $this->loadTemplate('buscar', $dados);
+    }
 }
 

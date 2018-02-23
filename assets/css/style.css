@@ -716,4 +716,29 @@ Inicio CSS Pagina Produto*/
 .descricao h4{
     text-align: justify;
 }
-/*Fim CSS Modal Frete*/
+/*Fim CSS Modal Frete
+
+Inicio CSS Busca*/
+.produtos-busca{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.buscar{
+    text-align: right;
+    min-height: 800px;
+    padding: 20px 15px 15px;
+}
+.buscar a{
+    text-align: center;
+    font-size: 18px;
+}
+#buscar{
+    color:#043D80;
+    border-bottom: 3px solid #FE9900;
+    text-align: center;
+    padding-bottom: 10px;
+    font-size: 30px;
+}
+/*Fim CSS Busca*/
