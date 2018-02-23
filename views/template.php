@@ -104,9 +104,9 @@
             <div class="rod3b">
                 <p>Redes Sociais</p>
                 <div class="social">
-                    <a href="https://www.facebook.com/inovehsolucoes/"><img src="<?php echo BASE_URL; ?>assets/images/face.png" alt=""/></a>
-                    <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5535999999999"><img src="<?php echo BASE_URL; ?>assets/images/whatsapp.png" alt=""/></a>
-                    <a href="https://www.youtube.com/channel/UCZMHTPDbVnR7Edlj3fIh_LA"><img src="<?php echo BASE_URL; ?>assets/images/youtube.png" alt=""/></a>
+                    <a href="https://www.facebook.com/inovehsolucoes/" target="_blanc"><img src="<?php echo BASE_URL; ?>assets/images/face.png" alt=""/></a>
+                    <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5535999999999" target="_blanc"><img src="<?php echo BASE_URL; ?>assets/images/whatsapp.png" alt=""/></a>
+                    <a href="https://www.youtube.com/channel/UCZMHTPDbVnR7Edlj3fIh_LA" target="_blanc"><img src="<?php echo BASE_URL; ?>assets/images/youtube.png" alt=""/></a>
                 </div>
             </div>
         </div>
@@ -132,6 +132,7 @@
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.zoom.min.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-ui.min.js"></script>
     <script src="<?php echo BASE_URL; ?>assets/js/script.js" type="text/javascript"></script>
+    <script src="<?php echo BASE_URL; ?>assets/js/modais.js" type="text/javascript"></script>
     <script src="<?php echo BASE_URL; ?>assets/js/slide_produtos_home.js" type="text/javascript"></script>
     
 </body>
