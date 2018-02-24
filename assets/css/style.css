@@ -741,4 +741,41 @@ Inicio CSS Busca*/
     padding-bottom: 10px;
     font-size: 30px;
 }
-/*Fim CSS Busca*/
+/*Fim CSS Busca
+
+Inicio CSS Cart*/
+#modalAddProduto{
+    margin-top: 40%;
+    height: 80px;
+    width: 650px;
+}
+#modalAddProduto .modal-content .modal-body {
+    height: 200px;
+    width: 650px;
+    text-align: left;
+}
+#modalAddProduto .modal-body a span{
+    background: transparent;
+    color:#043D80;
+    border:0;
+}
+.modalAddCart{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    align-items: center;
+}
+.modalAddCart form{
+    margin-top: 30px;
+}
+    
+.infomodal{
+    display: flex;
+    align-items: center;
+}
+.description{
+    margin-left: 10px;
+}
+.addCartImage img{
+    width:80px;
+}

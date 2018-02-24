@@ -58,5 +58,22 @@ class produtocontroller extends controller {
                    
         $this->loadTemplate('buscar', $dados);
     }
+    
+    public function getProdutoCart(){
+        $p = new produtos();
+         
+        $array = array();
+      
+       
+        if($_POST['id']) {
+        $id = addslashes($_POST['id']);
+               
+        $array = $p->getInfoProdutoCart($id);
+
+         
+        }
+        echo json_encode($array);         
+        exit();
+    }
 }
 

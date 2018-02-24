@@ -111,4 +111,19 @@ class produtos extends model {
         
         return $array;
     }
+    
+        public function getInfoProdutoCart($id){
+        $array = array();
+        
+        $sql = "SELECT *, (select imagem_produto.url from imagem_produto where imagem_produto.id_produto = produtos.id limit 1)as imagem FROM produtos WHERE id = :id";
+        $sql = $this->db->prepare($sql);
+        $sql->bindValue(":id", $id);
+        $sql->execute();
+
+        if($sql->rowCount() > 0) {
+            $array = $sql->fetch();
+        }
+         
+        return $array;
+    }
 }

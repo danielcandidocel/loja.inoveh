@@ -1,5 +1,3 @@
-
-
 $(function(){
 //  Funcçoes de mudança de quantidade do carrinho no produto  
 $('.addtocartform button').on('click', function(e){

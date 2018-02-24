@@ -1,3 +1,4 @@
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <div class="corpo">
 <section id="banner">
     <div class="container">
@@ -113,7 +114,7 @@
                                 <strong>R$ <?PHP echo number_format($viewData['listHome'][$qt]['valor_por'], 2, ',', '.');?></strong>
                             </div>
                             <div class="produto-home-add-to-cart">
-                                <a href="">
+                                <a href="javascript:;" onclick="addCart(<?php echo $viewData['listHome'][$qt]['id'];?>)">
                                     <div class="add-cart">
                                         <span class="glyphicon glyphicon-shopping-cart"></span>
                                         <p>Adicionar no </p><strong>Carrinho</strong>
@@ -186,7 +187,7 @@
                             <strong>R$ <?PHP echo number_format($viewData['listHome'][$qt]['valor_por'], 2, ',', '.');?></strong>
                         </div>
                         <div class="produto-home-add-to-cart">
-                            <a href="">
+                            <a href="javascript:;" onclick="addCart()">
                                 <div class="add-cart">
                                     <span class="glyphicon glyphicon-shopping-cart"></span>
                                     <p>Adicionar no </p><strong>Carrinho</strong>
@@ -215,4 +216,30 @@
 
         </div>
     </section>
+</div>
+
+<div id="modalAddCart" class="modal fade" role="dialog">
+    <div class="modal-dialog" id="modalAddProduto">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modalAddCart">
+                    <div class="infomodal">
+                        
+                    </div>
+                    <div class="formAdd">
+                        <form method="POST" class="addtocartform" action="<?php echo BASE_URL; ?>carrinho/add">
+                            <input type="hidden" name="id_produto" value="">
+                            <input type="hidden" name="qt_produto" value="1" >
+                            <input type="hidden" name="valor_produto" value="">
+                            <button data-action="decrease">-</button>
+                            <input type="text" name="qt" value="1" class="addtocart_qt"  disabled />
+                            <button data-action="increase">+</button><br/><br/>
+                            <input class="add-to-cart" type="submit" value="Adicionar" />
+                        </form>
+                    </div>
+                </div>
+                <a href="javascript:;" onclick="fechar_modalAddCart()"><span>Cancelar</span></a>
+            </div>
+        </div>
+    </div>
 </div>

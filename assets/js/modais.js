@@ -37,5 +37,35 @@ function calcularFrete() {
 function fechar_modalCep() {
      $('#modalFrete').modal('hide');
  }
+ 
+ function addCart(id) {
+     $.ajax({                        
+            url:BASE_URL+"produto/getProdutoCart/",
+            type:'POST',
+            data:{
+                id:id,                
+            },
+            dataType:'json',
+            success:function(res) {
+               
+                var html = '';
+                html = '<div class="addCartImage">\n\
+                <img src="'+BASE_URL+'/assets/images/produtos/'+res.imagem+'" alt=""/></div>\n\
+                <div class="description">'+res.nome+'</div>';
+                $(".infomodal").html(html); 
+                
+                $('input[name=id_produto]').val(res.id); 
+                $('#modalAddCart').modal('show'); 
+
+            },
+            error:function(){
+                alert('ERRO aqui');
+            }
+            
+         });
+ }
+ function fechar_modalAddCart() {
+     $('#modalAddCart').modal('hide'); 
+ }
 
 
