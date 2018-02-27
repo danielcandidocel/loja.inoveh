@@ -5,11 +5,22 @@ class produtocontroller extends controller {
   
 
     public function index() {    
+        
         header("Location: ".BASE_URL);
     }
     public function abrir($slug) {
         $dados = array();
-        
+        //        Carrinho
+        if(isset($_SESSION['cartInoveh'])){
+            $qt = 0;
+            foreach ($_SESSION['cartInoveh'] as $qtd){
+                $qt += intval($qtd);
+            }
+            $dados['qt_carrinho'] = $qt;
+        } else {
+            $dados['carrinho'] = 0;
+        }
+//        $dados['valor_carrinho'] = $cart->getSubTotal();
         $p = new produtos();
         
         $dados['produto'] = $p->getInfoProduto($slug);
@@ -46,6 +57,18 @@ class produtocontroller extends controller {
         $dados = array();
         $p = new produtos();
         
+//        Carrinho
+        if(isset($_SESSION['cartInoveh'])){
+            $qt = 0;
+            foreach ($_SESSION['cartInoveh'] as $qtd){
+                $qt += intval($qtd);
+            }
+            $dados['qt_carrinho'] = $qt;
+        } else {
+            $dados['carrinho'] = 0;
+        }
+//        $dados['valor_carrinho'] = $cart->getSubTotal();
+
     if(isset($_GET['b']) && !empty($_GET['b'])){
         $busca = addslashes($_GET['b']);
         $dados['busca'] = $p->buscar($busca);

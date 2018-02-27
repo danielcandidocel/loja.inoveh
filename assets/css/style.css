@@ -743,7 +743,7 @@ Inicio CSS Busca*/
 }
 /*Fim CSS Busca
 
-Inicio CSS Cart*/
+Inicio CSS Cart-Home*/
 #modalAddProduto{
     margin-top: 40%;
     height: 80px;
@@ -778,4 +778,136 @@ Inicio CSS Cart*/
 }
 .addCartImage img{
     width:80px;
+}
+/* FIm CSS Cart-Home
+
+Inicio CSS Carrinho*/
+.carrinho{
+    display: flex;
+    flex-direction: column;
+    padding: 5px 15px 15px;
+    min-height: 740px;
+    width: 100%;;
+}
+.carrinho-topo, .carrinho-rodape{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.continuar button{
+    background: #EDEDED;
+    color: #666;
+    font-size: 18px;
+    font-weight: bold;
+    width:300px;
+    height: 40px;
+    border:0;
+    border-bottom: 2px solid #999;
+}
+.continuar a{
+    color: #666;
+    font-size: 18px;
+    font-weight: bold;
+}
+.continuar button {
+    background: #EDEDED;
+    width:300px;
+    height: 40px;
+    border:0;
+    border-bottom: 2px solid #999;
+}
+.continuar h4{
+    font-weight: bold;
+    font-size: 22px;
+}
+.finalizar a{
+    color: #FFF;
+    font-size: 18px;
+    font-weight: bold;
+}
+.finalizar button {
+    background: #043D80;
+    width:300px;
+    height: 40px;
+    border:0;
+    border-bottom: 2px solid #FFF;
+}
+.finalizar button:hover a,
+.finalizar button:hover{
+    background: #FE9900;
+    color: #043D80;
+    text-decoration: none;
+}
+.finalizar, .continuar{
+    align-self: flex-end;
+    margin-bottom: 40px;    
+}
+.carrinho-produtos{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.carrinho-cabecalho{
+    display: flex;
+    justify-content: space-between;
+    background: #EDEDED;
+    font-size: 16px;
+    align-items: flex-end;
+    height: 30px;
+    padding: 0 12px 0 12px;
+}
+#produto-nome{
+    width: 50%;
+    
+}
+.carrinho-corpo{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 10px;
+}
+.carrinho-itens{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
+    height: 85px;
+   
+}
+.carrinho-itens img{
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.carrinho-valores{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.carrinho-frete{
+    height: 216px;
+    width: 824px;
+    border: 1px solid #e4e4e4;
+}
+.carrinho-total{
+    background: #EDEDED;
+    height: 216px;
+    width: 396px;
+}
+.carrinho-ofertas{
+    background: #EDEDED;
+    height: 310px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carrinho-ofertas-produtos{
+    background: #FFF;
+    height: 260px;
+    width: 97%;
 }
