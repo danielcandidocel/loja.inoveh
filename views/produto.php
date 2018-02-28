@@ -34,7 +34,7 @@
                 <span>Por R$ <strong id="por"><?php echo number_format($produto['valor_por'], 2, ',', '.');?></strong> à vista</span>
                 </div>
                 <div class="frete_qt">
-                    <form method="POST" class="addtocartform" action="<?php echo BASE_URL; ?>cart/add">
+                    <form method="POST" class="addtocartform" action="<?php echo BASE_URL; ?>carrinho/addCarrinho">
                         <input type="hidden" name="id_produto" value="<?php echo $produto['id']; ?>"/>            
                         <input type="hidden" name="qt_produto" value="1" />
                         <input type="hidden" name="valor_produto" value="<?php echo number_format($produto['preco'], 2, ',', '.');?>"/>
@@ -49,22 +49,6 @@
                 </div>
                 <div class="frete">
                     
-                    <?php if (isset($_SESSION['frete']) && !empty($_SESSION['frete'])): 
-                        
-                        if($frete['erro'] == 0):?>
-                    <span>Valor do frete é <strong>R$ <?php echo $frete['preco'];?></strong></span><br/><br/>
-                            <a href="<?php echo BASE_URL;?>produto/freteDel/<?php echo $produto['slug'];?>" alt="Recalcular Frete"><span>Recalcular Frete</span></a>
-                            <?php  else: if($frete['erro'] == '008'): ?>
-                                <strong>Opção Inexistente</strong><br/><br/>
-                                <a href="<?php echo BASE_URL;?>produto/freteDel/<?php echo $produto['slug'];?>" alt="Recalcular Frete"><span>Recalcular Frete</span></a>
-                            <?php  else: ?>
-                               <strong>CEP Incorreto</strong><br/><br/>
-                               <a href="<?php echo BASE_URL;?>produto/freteDel/<?php echo $produto['slug'];?>" alt="Recalcular Frete"><span>Recalcular Frete</span></a>
-                            <?php endif;?>
-                        <?php endif;?>
-                    
-                    <?php  else: ?>
-                               
                         <span>Consulte Frete e Prazo:</span>
                         <form method="POST" class="qt">
                             <input type="hidden" name="id_produto" value="<?php echo $produto['id']; ?>" />
@@ -74,7 +58,6 @@
                         </form> 
                         <span>Não sabe o frete? <a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="_blanc">Clique Aqui</a></span>
                         
-                    <?php endif;?>
                         
                 </div>
                 
@@ -101,4 +84,4 @@
 </div>
 
 <div id="descricao"></div>
-        <?PHP  $this->loadViewDescricao($produto['slug'], $viewData); ?>
+        <?PHP //  $this->loadViewDescricao($produto['slug'], $viewData); ?>

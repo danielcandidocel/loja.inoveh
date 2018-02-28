@@ -1,3 +1,4 @@
 <?php
-var_dump($frete);
+echo 'Total do Frete: '.$freteFinal;
+echo '<br/>Total da Compra: '.$totalFinal;
 
