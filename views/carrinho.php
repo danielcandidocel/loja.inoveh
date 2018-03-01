@@ -1,8 +1,9 @@
+<script src="<?php echo BASE_URL; ?>assets/js/script_freteCarrinho.js" type="text/javascript"></script>
 <div class="carrinho">
     <div class="carrinho-topo">
         <div class="continuar">
             <h4>Meu Carrinho de Compras</h4>
-            <button><a href="<?php echo BASE_URL?>carrinho/continuar">Continuar Comprando</a></button>
+            <button><a href="<?php echo BASE_URL?>">Continuar Comprando</a></button>
         </div>
         <div class="finalizar">
             <form method="POST" action="<?php echo BASE_URL;?>carrinho/finalizar">
@@ -53,10 +54,15 @@
                 </form> 
                 <span>Não sabe o frete? <a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="_blanc">Clique Aqui</a></span>
                 <?php else: ?>
-                <span>Valor do Frete: <strong>R$ <input type="text" id="freteFinalizar" value="<?php echo $frete['preco'];?>"/></strong></span>
-                <span>Prazo Estimado: <strong><?php echo $frete['prazo'];?> dias</strong></span>
-                <a href="<?php echo BASE_URL?>carrinho/freteDel" id="recalcular">Recalcular</a>
+                    <?php if ($frete['erro'] != '0'):?>
+                        <span id="cepIncorreto">CEP Incorreto</span>
+                        <a href="<?php echo BASE_URL?>carrinho/freteDel" id="recalcular">Recalcular</a>
+                    <?php else: ?>
+                        <span>Valor do Frete: <strong>R$ <input type="text" id="freteFinalizar" value="<?php echo $frete['preco'];?>"/></strong></span>
+                        <span>Prazo Estimado: <strong><?php echo $frete['prazo'];?> dias</strong></span>
+                        <a href="<?php echo BASE_URL?>carrinho/freteDel" id="recalcular">Recalcular</a>
                     <?php endif;?>
+                <?php endif;?>
                 
             </div>
             <div class="msg-frete">
@@ -86,7 +92,7 @@
     </div>
     <div class="carrinho-rodape">
         <div class="continuar">
-            <button><a href="<?php echo BASE_URL?>carrinho/continuar">Continuar Comprando</a></button>
+            <button><a href="<?php echo BASE_URL?>">Continuar Comprando</a></button>
         </div>
         <div class="finalizar">
             <form method="POST" action="<?php echo BASE_URL;?>carrinho/finalizar">

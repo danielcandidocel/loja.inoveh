@@ -99,23 +99,52 @@ header{
 .menu {
     background-color: #043D81;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     margin: 0;
-    padding:0;
-    height: 70px;    
+    padding:10px 40px;
+    height: 70px; 
 }
-nav ul{
+nav{
     display: flex;
+    background-color: #043D81;
+    
+    z-index: 999;
+}
+.menuMobile{
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+.menuMobile:hover, .titulo-categoria:hover{
+    cursor: pointer;
+}
+.titulo-categoria{
+    font-size: 26px;
+    color: #FFF;
+    padding: 0 10px;
+}    
+.mm_line{
+    height: 3px;
+    background-color: #FFF;
+    
+}
+.menu nav ul{
+    display: none;
+    justify-content: flex-start;
     align-items: center;
-    margin: 0;
+    flex-direction: column;
+    background-color: #043D81;
+    margin-top: 60px;
+    margin-left: -230px;
+    z-index: 999;
     padding:0;
-    height: 70px;
 }
 nav li{
     list-style: none;
     font-size: 17px;
-    border-left: 2px solid #FFF;
     height: 70px;
     line-height: 70px;
     margin: 0;
@@ -125,6 +154,10 @@ nav a{
     color: #FFF;
     text-align: center;
     text-transform: uppercase;
+}
+nav a:hover{
+    color: #FE9900;
+    text-decoration: none;
 }
 .corpo{
     display: flex;
@@ -1004,3 +1037,7 @@ Inicio CSS Carrinho*/
     height: 40px;
     border-bottom: 2px solid #FFF;
 }
+#cepIncorreto{
+    color: red;
+}
+/*Fim CSS Carrinho*/

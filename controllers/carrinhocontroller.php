@@ -4,13 +4,14 @@ class carrinhocontroller extends controller {
     
     public function index(){
         $dados = array();
+        $cat = new categorias();
         $c = new carrinho();
         $f = new frete();
         $frete = array();
-        
+        $dados['categorias'] = $cat->getCategorias();
             //        Carrinho
         if(!isset($_SESSION['cartInoveh']) || (isset($_SESSION['cartInoveh']) && count($_SESSION['cartInoveh']) == 0)) {
-            unset($_SESSION['frete']);
+            unset($_SESSION['freteInoveh']);
             header("Location: ".BASE_URL);
             exit;
         }
@@ -34,11 +35,11 @@ class carrinhocontroller extends controller {
         if(!empty($_POST['cep'])) {
             $cep = intval($_POST['cep']);
             $frete = $f->calculoFreteCarrinho($cep);
-            $_SESSION['frete'] = $frete;
+            $_SESSION['freteInoveh'] = $frete;
         }
         
-        if(!empty($_SESSION['frete'])) {
-            $frete = $_SESSION['frete'];
+        if(!empty($_SESSION['freteInoveh'])) {
+            $frete = $_SESSION['freteInoveh'];
         }
         
         $dados['frete'] = $frete;
@@ -47,7 +48,7 @@ class carrinhocontroller extends controller {
 
     public function addCarrinho() {
         $dados = array();
-        unset($_SESSION['frete']);
+        unset($_SESSION['freteInoveh']);
        if(!empty($_POST['id_produto'])) {
             $id = intval($_POST['id_produto']);
             $qt = intval($_POST['qt_produto']);  
@@ -67,7 +68,7 @@ class carrinhocontroller extends controller {
     }
     public function add() {
         $dados = array();
-        unset($_SESSION['frete']);
+        unset($_SESSION['freteInoveh']);
        if(!empty($_POST['id_produto'])) {
             $id = intval($_POST['id_produto']);
             $qt = intval($_POST['qt_produto']);  
@@ -89,7 +90,7 @@ class carrinhocontroller extends controller {
     public function delProduto($id){
         if(!empty($id)) {
             unset($_SESSION['cartInoveh'][$id]);
-            unset($_SESSION['frete']);
+            unset($_SESSION['freteInoveh']);
             
         }
         header("Location: ".BASE_URL."carrinho");
@@ -102,19 +103,17 @@ class carrinhocontroller extends controller {
     }
     
     public function freteDel() {
-        if($_SESSION['frete']){
-            unset($_SESSION['frete']);
+        if($_SESSION['freteInoveh']){
+            unset($_SESSION['freteInoveh']);
         }
         header("Location: ".BASE_URL."carrinho");
         exit;
     }
-    public function continuar(){
-        unset($_SESSION['frete']);
-        header("Location: ".BASE_URL);
-    }
+
     public function finalizar(){
         $dados = array();
-    
+         $cat = new categorias();
+        $dados['categorias'] = $cat->getCategorias();
         if(!empty($_POST['finalizarFrete'])) {
             $dados['freteFinal'] = addslashes($_POST['finalizarFrete']);
              $dados['totalFinal'] = addslashes($_POST['finalizarTotal']);  

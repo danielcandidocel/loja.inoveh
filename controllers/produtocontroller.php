@@ -10,6 +10,8 @@ class produtocontroller extends controller {
     }
     public function abrir($slug) {
         $dados = array();
+        $cat = new categorias();
+        $dados['categorias'] = $cat->getCategorias();
         //        Carrinho
         if(isset($_SESSION['cartInoveh'])){
             $qt = 0;
@@ -29,7 +31,7 @@ class produtocontroller extends controller {
     }
     
     public function freteDel($slug){
-        unset($_SESSION['frete']);
+        unset($_SESSION['freteInoveh']);
         header("Location: ".BASE_URL."produto/abrir/".$slug);
     }
    

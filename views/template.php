@@ -9,6 +9,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         
         <!--Scritp para funcionar a barra de rolagem do preço-->
+        
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/bootstrap.min.js"></script> 
         <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.min.js"></script> 
@@ -56,17 +57,8 @@
                     </div>
                 </div>
             </div>
-        </div> 
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="">Balanças</li>
-                    <li><a href="">Suprimentos</a></li>
-                    <li><a href="">Informática</a></li>
-                    <li style="border-right: 2px solid #FFF"><a href="">Automação</a></li>
-                </ul>
-            </nav>
         </div>
+      <?php  $this->loadView('menuNav', array('cat'=>$viewData['categorias']));?>
     </header>
     
         <?php $this->loadViewInTemplate($viewName, $viewData); ?>
@@ -131,7 +123,9 @@
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.zoom.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery.zoom.min.js"></script>
     <script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-ui.min.js"></script>
-    <script src="<?php echo BASE_URL; ?>assets/js/script.js" type="text/javascript"></script>
+    
+    <script src="<?php echo BASE_URL; ?>assets/js/script_produto.js" type="text/javascript"></script>
+    
     <script src="<?php echo BASE_URL; ?>assets/js/modais.js" type="text/javascript"></script>
     <script src="<?php echo BASE_URL; ?>assets/js/slide_produtos_home.js" type="text/javascript"></script>
     

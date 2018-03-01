@@ -4,7 +4,7 @@ class homecontroller extends controller {
  
     public function index() {
         $filtros= array();//variavel para atualização dos filtros
-        
+        $cat = new categorias();
         $p = new produtos();
         
         //        Carrinho
@@ -17,6 +17,9 @@ class homecontroller extends controller {
         } else {
             $dados['carrinho'] = 0;
         }
+        $dados['categorias'] = $cat->getCategorias();
+        
+       
 //        $dados['valor_carrinho'] = $cart->getSubTotal();
         
         
