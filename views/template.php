@@ -4,6 +4,7 @@
         <meta name="viewport" content="width=device-width, user-scalable=0" />
         <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css" type="text/css" />
+         <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
         
         <!--Script para funcionar o Slider-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -21,8 +22,8 @@
         
         <title>Inoveh Shop</title>
     </head>
-<body>
-    <header>
+<body> 
+    <header><div class="fundo" id="fundo"></div>
         <div class="topo">
             <div class="logo">
                 <a href="<?php echo BASE_URL;?>">
@@ -58,11 +59,11 @@
                 </div>
             </div>
         </div>
-      <?php  $this->loadView('menuNav', array('cat'=>$viewData['categorias']));?>
+      <?php  $this->loadView('menuNav', array('cat'=>$viewData['categorias_produtos']));?>
     </header>
     
         <?php $this->loadViewInTemplate($viewName, $viewData); ?>
- 
+
 <footer>
     <div class="rodape">
         <div class="rod1">
@@ -71,7 +72,7 @@
                 Centro - Pouso Alegre / MG <br/>
                 CEP 37550-000<br/>
                 <a href="tel:03530421849">(35) 3042-1849</a><br/>
-                contato@loja.inoveh.com.br</p>
+                vendas@inoveh.com.br</p>
         </div>
         <div class="rod2">
             <p>Institucional</p>
@@ -97,7 +98,7 @@
                 <p>Redes Sociais</p>
                 <div class="social">
                     <a href="https://www.facebook.com/inovehsolucoes/" target="_blanc"><img src="<?php echo BASE_URL; ?>assets/images/face.png" alt=""/></a>
-                    <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5535999999999" target="_blanc"><img src="<?php echo BASE_URL; ?>assets/images/whatsapp.png" alt=""/></a>
+                    <a href="http://api.whatsapp.com/send?1=pt_BR&phone=5535987072260" target="_blanc"><img src="<?php echo BASE_URL; ?>assets/images/whatsapp.png" alt=""/></a>
                     <a href="https://www.youtube.com/channel/UCZMHTPDbVnR7Edlj3fIh_LA" target="_blanc"><img src="<?php echo BASE_URL; ?>assets/images/youtube.png" alt=""/></a>
                 </div>
             </div>

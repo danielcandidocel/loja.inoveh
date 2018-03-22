@@ -9,8 +9,19 @@ class categorias extends model {
         
          if($sql->rowCount() > 0) {
             $array = $sql->fetchAll();
-            
+            foreach ($array as $key => $cat){
+                
+                $sql = "SELECT * FROM produtos WHERE categoria = :cat";
+                $sql = $this->db->prepare($sql);
+                $sql->bindValue("cat", $cat['id']);
+                $sql->execute();
+                    if($sql->rowCount() > 0) {
+                        $array[$key]['produto'] = $sql->fetchAll();
+                    }
+            }
+                
         }
+        
         
         return $array;
     }

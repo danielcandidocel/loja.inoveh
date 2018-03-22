@@ -17,8 +17,10 @@ class homecontroller extends controller {
         } else {
             $dados['carrinho'] = 0;
         }
-        $dados['categorias'] = $cat->getCategorias();
-        
+        $dados['categorias_produtos'] = $cat->getCategorias();
+//        echo '<pre>';
+//         print_r($dados['categorias_produtos']);
+//         exit();
        
 //        $dados['valor_carrinho'] = $cart->getSubTotal();
         

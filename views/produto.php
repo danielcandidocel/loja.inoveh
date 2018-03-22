@@ -84,4 +84,4 @@
 </div>
 
 <div id="descricao"></div>
-        <?PHP //  $this->loadViewDescricao($produto['slug'], $viewData); ?>
+        <?PHP $this->loadViewDescricao($produto['slug'], $viewData); ?>

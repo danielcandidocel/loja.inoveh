@@ -58,7 +58,8 @@ class produtocontroller extends controller {
     public function busca() {
         $dados = array();
         $p = new produtos();
-        
+        $cat = new categorias();
+        $dados['categorias'] = $cat->getCategorias();
 //        Carrinho
         if(isset($_SESSION['cartInoveh'])){
             $qt = 0;
